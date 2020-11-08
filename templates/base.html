@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Xask</title>
+</head>
+<body>
+
+
+    {% block content %}
+<img src="{% url 'video_feed' %}" >
+  {% endblock %}
+
+</body>
+</html>

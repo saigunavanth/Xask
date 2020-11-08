@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<title>Xask</title>
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}">
+	
+
+</head>
+<body style="background-color: #000;">
+<nav class="navbar navbar-dark navbar-expand-lg">
+        <a class="navbar-brand brand" href=" " style="font-size: 2.5rem;">Xask</a>
+       
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/saigunavanth">Github</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/b-sai-gunavanth-352a7192/">Linkedin</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+     <div class="detect">
+     <table>
+      <tr>
+        <td>
+      <form method="GET" action="start">
+        {% csrf_token %}
+        <div class="control" style="margin-left: 160px;">
+        <button class="btn btn-outline-primary btn-lg">Start</button>
+        </div>
+      </form>
+      </td>
+      <td>
+      <form method="GET" action="stop">
+        {% csrf_token %}
+        <div class="control" style="margin-left: 170px;">
+        <button class="btn btn-outline-danger btn-lg">Stop</button>
+        </div>
+      </form>
+    </td>
+
+    </tr>
+     </table>
+	{% block content %}
+
+  {% endblock %}
+
+     </div>
+</html>
